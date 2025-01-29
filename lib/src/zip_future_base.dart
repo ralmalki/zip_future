@@ -52,7 +52,7 @@ class ZipFuture {
   /// the error. If [onError] is not provided, the error will be rethrown.
   ///
   /// Returns a [Future] that completes with the mapped result of type [T].
-  Future<T> executeThenMap<T>(
+  Future<T?> executeThenMap<T>(
     T Function(List<dynamic>) mapper, {
     void Function(int index, dynamic error)? onError,
   }) async {
